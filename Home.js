@@ -6,7 +6,7 @@ import MovieCard from "./MovieCard.js";
 import { StatusBar } from "react-native";
 
 
-export default function Home() {
+export default function Home({navigation}) {
     const [movies, setMovies] = useState([])
     const [searchMovies, setSearchMovies] = useState(['star wars']);
 
@@ -26,8 +26,10 @@ export default function Home() {
               <TextInput placeholder="Search" value={searchMovies} onChangeText={(text) => setSearchMovies(text)} left={<TextInput.Icon name="magnify" />} onSubmitEditing={getMovies}/>
               <ScrollView>
                 {movies.Search.map((movie, i) => (
-                  <MovieCard movie={movie} key={i} />
+                  <MovieCard movie={movie} key={i} navigation={navigation} />
+
                 ))}
+                
               </ScrollView>
             </View>
           )}
