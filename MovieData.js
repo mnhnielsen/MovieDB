@@ -1,6 +1,6 @@
 import { View, Image, Text } from "react-native";
 
-export default function MovieCard({ movie, navigation }) {
+export default function MovieData({ movie, navigation }) {
   
   return (
     <View >

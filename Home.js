@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { fetchMovies } from "./API/Movies";
 import { TextInput } from "react-native-paper";
-import MovieCard from "./MovieCard.js";
+import MovieData from "./MovieData";
 import { StatusBar } from "react-native";
-import { FlatList } from "react-native";
 
 
 export default function Home({navigation}) {
@@ -27,7 +26,7 @@ export default function Home({navigation}) {
               <TextInput placeholder="Search" value={searchMovies} onChangeText={(text) => setSearchMovies(text)} left={<TextInput.Icon name="magnify" />} onSubmitEditing={getMovies}/>
               <ScrollView>
                 {movies.Search.map((movie, i) => (
-                  <MovieCard movie={movie} key={i} navigation={navigation} />
+                  <MovieData movie={movie} key={i} navigation={navigation} />
 
                 ))}
                 
