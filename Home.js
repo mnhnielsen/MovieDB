@@ -4,6 +4,7 @@ import { fetchMovies } from "./API/Movies";
 import { TextInput } from "react-native-paper";
 import MovieCard from "./MovieCard.js";
 import { StatusBar } from "react-native";
+import { FlatList } from "react-native";
 
 
 export default function Home({navigation}) {
